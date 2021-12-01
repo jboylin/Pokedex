@@ -121,6 +121,7 @@ body {
   margin-bottom: 1rem;
   color: var(--clr-blue);
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
   box-shadow: var(--bs);
   padding: 0.5rem;
@@ -137,5 +138,8 @@ body {
   }
   .logo_image {
     width: 360px;
+  }
+  .top_a {
+    width: 130px;
   }
 }
