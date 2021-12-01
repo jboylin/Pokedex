@@ -125,3 +125,17 @@ body {
   box-shadow: var(--bs);
   padding: 0.5rem;
 }
+
+/* responsiveness */
+
+@media (max-width: 600px) {
+  :root {
+    --fs-h1: 2.3rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.2rem;
+    --fs-body: 1.125rem;
+  }
+  .logo_image {
+    width: 360px;
+  }
+}
