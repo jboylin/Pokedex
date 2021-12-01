@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#list">
+          <img
+            src="/images/1200px-International_Pokémon_logo.svg.png"
+            alt="logo"
+          />
+        </a>
+      </div>
+    </header>
+
+    <section class="intro" id="home">
+      <h1 class="title">Pokedex <strong>ALPHA</strong></h1>
+      <h2 class="subtitle">A website to view your Pokemon.</h2>
+      <div class="image_pokedex"></div>
+    </section>
+    <section class="pokemon_list" id="list">
+      <h3 class="poke_list">YOUR POKEMON</h3>
+      <div id="article"></div>
+    </section>
+    <button class="page_button" aria-label="change page">
+      <span class="page_next">LOAD MORE</span>
+    </button>
+    <a class="top_a" href="#list" aria-label="back to top"> Back to Top... </a>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

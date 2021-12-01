@@ -1,0 +1,127 @@
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-red: #ff0000;
+  --clr-blue: #3b4cca;
+  --clr-yellow: #ffde00;
+  --clr-white: #ffffff;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 2rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --bs-h1: 0.05em 0.05em 0em var(--clr-blue),
+    -0.05em -0.05em 0em var(--clr-blue), 0.05em -0.05em 0em var(--clr-blue),
+    -0.05em 0.05em 0em var(--clr-blue);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--clr-red);
+  color: var(--clr-yellow);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+.title {
+  font-size: var(--fs-h1);
+  text-shadow: var(--bs-h1);
+}
+
+.subtitle {
+  font-size: var(--fs-h2);
+  text-shadow: var(--bs-h1);
+}
+
+.logo {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.image_pokedex {
+  background-image: url("/images/pokemap.png");
+  min-height: 600px;
+  min-width: 100vw;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.poke_list {
+  font-size: var(--fs-h3);
+  text-align: center;
+  border-bottom: dotted 9px var(--clr-blue);
+}
+
+#article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#article img {
+  min-width: 200px;
+  box-shadow: var(--bs);
+  border-radius: 10%;
+}
+
+#article h1 {
+  font-size: var(--fs-h1);
+  text-shadow: var(--bs);
+}
+
+#article h2 {
+  margin: 0.25rem;
+}
+
+.page_button {
+  height: 100px;
+  width: 100px;
+  background: var(--clr-yellow);
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  margin: 2rem;
+  color: var(--clr-blue);
+  cursor: pointer;
+  box-shadow: var(--bs);
+}
+
+.top_a {
+  height: 30px;
+  width: 100px;
+  background: var(--clr-yellow);
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+  color: var(--clr-blue);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--bs);
+  padding: 0.5rem;
+}
