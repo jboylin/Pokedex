@@ -1,13 +1,12 @@
 const nextButton = document.querySelector(".page_button");
 const toggleAlphabetical = document.querySelector(".toggle_alphabetical");
+const toggleId = document.querySelector(".toggle_id");
 const articleDiv = document.getElementById("article");
 const image = document.getElementById("image");
 let baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=10";
 let nextUrl = "";
 
 let articles = [];
-
-let sorted = false;
 
 callApi(baseUrl);
 
@@ -74,9 +73,23 @@ function removeElements() {
 
 function sortAlphabetically(data) {
   removeElements();
-  data.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
+  const sortedAlphabetically = [...data];
+  sortedAlphabetically.sort((a, b) =>
+    a.name > b.name ? 1 : b.name > a.name ? -1 : 0
+  );
+  renderArticles(sortedAlphabetically);
+}
+
+function sortById(data) {
+  removeElements();
+  data.sort((a, b) => (a.id > b.id ? 1 : b.id > a.id ? -1 : 0));
+  console.log(articles);
   renderArticles(data);
 }
+
+toggleId.addEventListener("click", () => {
+  sortById(articles);
+});
 
 toggleAlphabetical.addEventListener("click", () => {
   sortAlphabetically(articles);
