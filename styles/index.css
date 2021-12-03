@@ -38,6 +38,11 @@ body {
   line-height: 1.6;
 }
 
+.pokemon_list {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   font-size: var(--fs-h1);
   text-shadow: var(--bs-h1);
@@ -125,6 +130,27 @@ body {
   cursor: pointer;
   box-shadow: var(--bs);
   padding: 0.5rem;
+}
+
+.toggle_alphabetical,
+.toggle_id {
+  flex-direction: row;
+  border-radius: 10px;
+  border: none;
+  background: #ffde00;
+  color: #3b4cca;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: var(--fs-body);
+  cursor: pointer;
+  box-shadow: var(--bs);
+}
+
+.toggle_alphabetical:hover,
+.toggle_id:hover,
+.page_button:hover,
+.top_a:hover {
+  box-shadow: none;
 }
 
 /* responsiveness */
