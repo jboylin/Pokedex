@@ -82,9 +82,10 @@ function sortAlphabetically(data) {
 
 function sortById(data) {
   removeElements();
-  data.sort((a, b) => (a.id > b.id ? 1 : b.id > a.id ? -1 : 0));
+  const sortedById = [...data];
+  sortedById.sort((a, b) => (a.id > b.id ? 1 : b.id > a.id ? -1 : 0));
   console.log(articles);
-  renderArticles(data);
+  renderArticles(sortedById);
 }
 
 toggleId.addEventListener("click", () => {
